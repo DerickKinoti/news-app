@@ -1,6 +1,5 @@
 from app import app
-from flask import render_template,redirect,url_for,request
-
+from flask import render_template,url_for,request,redirect
 
 from .requests import get_news,get_headlines,get_search,get_topstories
 @app.route('/')
@@ -44,6 +43,5 @@ def search(query):
 
 @app.errorhandler(404)
 def err(error):
-
     return render_template('error.html'), 404
 
