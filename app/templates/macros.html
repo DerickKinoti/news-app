@@ -1,13 +1,5 @@
 {% macro display(category) %}
-
     {% for heads in category%}
-
-<li>  <a href="/sources/{{heads.id}}">{{heads.name}}</a></li>
-
-
+        <li>  <a href="/sources/{{heads.id}}">{{heads.name}}</a></li>
     {% endfor %}
-
-
-
-
 {% endmacro %}
