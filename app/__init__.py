@@ -1,11 +1,10 @@
 from flask import Flask
+from .config import Config
 from flask_bootstrap import Bootstrap
 from .config import DevConfig
-from .config import Config
 
 
 app = Flask(__name__,instance_relative_config = True)
-
 
 
 app.config.from_object(DevConfig)
