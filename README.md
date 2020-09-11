@@ -6,6 +6,9 @@ A flask web application that consumes the News API to enables user to view vario
 
 # Technologies Used
 flask(python)
+
 bootstrap
+
 css
+
 html
