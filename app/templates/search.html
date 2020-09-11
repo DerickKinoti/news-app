@@ -1,22 +1,17 @@
 {% extends 'base.html' %}
 {%block styles%}
-      {{ super() }}
-      <link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/news.css')}}">
-
+{{ super() }}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/news.css')}}">
 {% endblock %}
 {% block content %}
 <div class="container">
-{% for newst in search %}
-      <li>{{newst.description}}</li>
-         <li class="badge badge-primary">Time published: {{newst.timepublished}}</li>
-         <a href="{{newst.link}}">{{newst.link}}</a>
-
-       <br>
+    <h1 style="color:#16dafa;">Search Results </h1><br>
+    {% for newst in search %}
+    <li style="color:white;">{{newst.description}}</li>
+    <li class="badge badge-primary">Time published: {{newst.timepublished}}</li>
+    <a href="{{newst.link}}">{{newst.link}}</a>
+    <br>
     <img src="{{newst.image}}" class="img-responsive">
-
-
-
-{% endfor %}
+    {% endfor %}
 </div>
-
 {% endblock %}
